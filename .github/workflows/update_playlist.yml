@@ -25,7 +25,7 @@ jobs:
           pip install requests
 
       - name: Run Python script
-        run: python nama_file_skrip_anda.py # Ganti dengan nama file skrip Python Anda
+        run: python Scripts/generate_playlist.py
 
       - name: Commit and push changes
         run: |
@@ -34,3 +34,4 @@ jobs:
           git add Finalplay.m3u
           git commit -m "Auto-update playlist: $(date)" || echo "Tidak ada perubahan"
           git push
+          
