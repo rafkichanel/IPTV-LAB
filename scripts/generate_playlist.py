@@ -3,51 +3,86 @@ import os
 import re
 from datetime import datetime
 
-# URL sumber M3U yang ingin Anda gunakan (ubah ini sesuai kebutuhan)
-SOURCE_URL = "https://iptv-org.github.io/iptv/index.m3u"
+# Lokasi file sumber dan hasil
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SOURCE_FILE = os.path.join(BASE_DIR, "sources.txt")
+OUTPUT_FILE = os.path.join(BASE_DIR, "Finalplay.m3u")
 
-# Lokasi file output
-# Skrip akan membuat Finalplay.m3u di folder yang sama dengan skrip ini
-OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Finalplay.m3u")
-
-def process_single_playlist(source_url, output_file):
-    """
-    Mengunduh, memproses, dan menyimpan playlist dari satu URL sumber.
-    """
+def fetch_and_combine_sources():
+    """Mengambil konten M3U dari semua URL di sources.txt dan menggabungkannya."""
+    # Mulai dengan header M3U tunggal
+    combined_content = "#EXTM3U\n"
+    
     try:
-        print(f"📡 Mengunduh dari sumber: {source_url}")
-        r = requests.get(source_url, timeout=15)
-        r.raise_for_status()
-        lines = r.text.splitlines()
+        with open(SOURCE_FILE, "r", encoding="utf-8") as f:
+            urls = [line.strip() for line in f if line.strip()]
+    except FileNotFoundError:
+        print(f"Error: File '{SOURCE_FILE}' tidak ditemukan.")
+        return None
+    except Exception as e:
+        print(f"Error saat membaca file sumber: {e}")
+        return None
 
-        # --- Filter di awal (dipertahankan) ---
-        # Menghapus baris yang berkaitan dengan "WHATSAPP"
-        lines = [line for line in lines if "WHATSAPP" not in line.upper()]
-        
-        # --- Logika penghapusan logo UNIVERSAL ---
-        cleaned_lines = []
-        for line in lines:
-            if line.startswith("#EXTINF"):
-                line = re.sub(r'tvg-logo="[^"]*"', '', line)
-                line = re.sub(r'group-logo="[^"]*"', '', line)
-                cleaned_lines.append(line)
-            else:
-                cleaned_lines.append(line)
-        lines = cleaned_lines
-        
-        playlist_content = "\n".join(lines)
-        playlist_content = re.sub(r'group-title="SEDANG LIVE"', 'group-title="LIVE EVENT"', playlist_content, flags=re.IGNORECASE)
+    if not urls:
+        print("Peringatan: Tidak ada URL yang ditemukan di file sumber.")
+        return combined_content
 
-        lines = playlist_content.splitlines()
+    for url in urls:
+        try:
+            print(f"📡 Mengunduh dari sumber: {url}")
+            response = requests.get(url, timeout=15)
+            response.raise_for_status()
+            
+            # Memproses konten dan menghapus header #EXTM3U dari setiap sumber
+            lines = response.text.splitlines()
+            content_without_header = "\n".join(line for line in lines if line.strip() and not line.strip().startswith("#EXTM3U"))
+            
+            # --- Terapkan semua filter yang sudah ada ---
+            cleaned_lines = []
+            for line in content_without_header.splitlines():
+                # Filter 'WHATSAPP'
+                if "WHATSAPP" in line.upper():
+                    continue
+                # Menghapus logo
+                if line.startswith("#EXTINF"):
+                    line = re.sub(r'tvg-logo="[^"]*"', '', line)
+                    line = re.sub(r'group-logo="[^"]*"', '', line)
+                cleaned_lines.append(line)
+            
+            # Tambahkan ke konten gabungan
+            combined_content += "\n".join(cleaned_lines) + "\n"
+        except requests.exceptions.RequestException as e:
+            print(f"❗ Gagal mengambil data dari {url}: {e}")
+        except Exception as e:
+            print(f"❌ Terjadi kesalahan tak terduga: {e}")
+            
+    return combined_content
+
+def save_and_process_playlist(content):
+    """Memproses dan menyimpan konten playlist akhir ke file output."""
+    if not content:
+        print("Tidak ada konten untuk disimpan.")
+        return False
+        
+    try:
+        lines = content.splitlines()
+        
+        # --- Mengurutkan channel Live Event ---
         live_event = []
         other_channels = []
         current_group = None
-
+        
         for line in lines:
             if line.startswith("#EXTINF"):
                 match = re.search(r'group-title="([^"]+)"', line)
                 if match:
                     current_group = match.group(1)
+                
+                # Mengubah nama grup 'SEDANG LIVE' menjadi 'LIVE EVENT'
+                if current_group and current_group.upper() == "SEDANG LIVE":
+                    line = line.replace('group-title="SEDANG LIVE"', 'group-title="LIVE EVENT"')
+                    current_group = "LIVE EVENT"
+
                 if current_group and current_group.upper() == "LIVE EVENT":
                     live_event.append(line)
                 else:
@@ -57,23 +92,23 @@ def process_single_playlist(source_url, output_file):
                     live_event.append(line)
                 else:
                     other_channels.append(line)
-        
+                    
         final_playlist = ["#EXTM3U"]
         final_playlist += live_event + other_channels
 
-        with open(output_file, "w", encoding="utf-8") as f:
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write("\n".join(final_playlist))
-        
-        print(f"✅ Playlist diperbarui dan disimpan ke {output_file} - {datetime.utcnow().isoformat()} UTC")
+            
+        print(f"✅ Playlist diperbarui dan disimpan ke {OUTPUT_FILE} - {datetime.utcnow().isoformat()} UTC")
         return True
-    
-    except requests.exceptions.RequestException as e:
-        print(f"❗ Gagal mengambil data dari {source_url}: {e}")
-        return False
     except Exception as e:
-        print(f"❌ Terjadi kesalahan tak terduga: {e}")
+        print(f"❌ Gagal menyimpan file: {e}")
         return False
 
 # --- Jalankan proses ---
 if __name__ == "__main__":
-    process_single_playlist(SOURCE_URL, OUTPUT_FILE)
+    print("Memulai proses pembuatan playlist...")
+    final_content = fetch_and_combine_sources()
+    if final_content:
+        save_and_process_playlist(final_content)
+    print("Proses selesai.")
