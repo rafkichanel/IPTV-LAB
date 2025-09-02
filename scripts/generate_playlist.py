@@ -8,10 +8,23 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SOURCE_FILE = os.path.join(BASE_DIR, "sources.txt")
 OUTPUT_FILE = os.path.join(BASE_DIR, "Finalplay.m3u")
 
+def validate_stream(url):
+    """Memvalidasi URL channel dengan mencoba koneksi."""
+    try:
+        # Menggunakan HEAD request untuk efisiensi
+        response = requests.head(url, timeout=5)
+        # Atau GET request dengan stream=True untuk memeriksa koneksi awal
+        # response = requests.get(url, timeout=5, stream=True)
+        response.raise_for_status()
+        return True
+    except requests.exceptions.RequestException:
+        return False
+    except Exception:
+        return False
+
 def fetch_and_combine_sources():
     """Mengambil konten M3U dari semua URL di sources.txt dan menggabungkannya."""
-    # Mulai dengan header M3U tunggal
-    combined_content = "#EXTM3U\n"
+    unique_channels = {}
     
     try:
         with open(SOURCE_FILE, "r", encoding="utf-8") as f:
@@ -25,7 +38,7 @@ def fetch_and_combine_sources():
 
     if not urls:
         print("Peringatan: Tidak ada URL yang ditemukan di file sumber.")
-        return combined_content
+        return "#EXTM3U\n"
 
     for url in urls:
         try:
@@ -33,30 +46,38 @@ def fetch_and_combine_sources():
             response = requests.get(url, timeout=15)
             response.raise_for_status()
             
-            # Memproses konten dan menghapus header #EXTM3U dari setiap sumber
             lines = response.text.splitlines()
-            content_without_header = "\n".join(line for line in lines if line.strip() and not line.strip().startswith("#EXTM3U"))
-            
-            # --- Terapkan semua filter yang sudah ada ---
-            cleaned_lines = []
-            for line in content_without_header.splitlines():
-                # Filter 'WHATSAPP'
-                if "WHATSAPP" in line.upper():
-                    continue
-                # Menghapus logo
+            for i in range(len(lines)):
+                line = lines[i]
                 if line.startswith("#EXTINF"):
-                    line = re.sub(r'tvg-logo="[^"]*"', '', line)
-                    line = re.sub(r'group-logo="[^"]*"', '', line)
-                cleaned_lines.append(line)
-            
-            # Tambahkan ke konten gabungan
-            combined_content += "\n".join(cleaned_lines) + "\n"
+                    if "WHATSAPP" in line.upper():
+                        continue
+                    
+                    channel_name_match = re.search(r',(.+)', line)
+                    if not channel_name_match:
+                        continue
+                    channel_name = channel_name_match.group(1).strip()
+                    
+                    if i + 1 < len(lines) and not lines[i+1].startswith('#'):
+                        channel_url = lines[i+1]
+                        
+                        # Hanya tambahkan jika channel valid dan unik
+                        if channel_name not in unique_channels:
+                            print(f"   Memvalidasi {channel_name}...")
+                            if validate_stream(channel_url):
+                                filtered_line = re.sub(r'tvg-logo="[^"]*"', '', line)
+                                filtered_line = re.sub(r'group-logo="[^"]*"', '', filtered_line)
+                                unique_channels[channel_name] = f"{filtered_line}\n{channel_url}"
+                                print(f"   ✅ {channel_name} valid.")
+                            else:
+                                print(f"   ❌ {channel_name} tidak valid.")
+                            
         except requests.exceptions.RequestException as e:
             print(f"❗ Gagal mengambil data dari {url}: {e}")
         except Exception as e:
             print(f"❌ Terjadi kesalahan tak terduga: {e}")
-            
-    return combined_content
+    
+    return "#EXTM3U\n" + "\n".join(unique_channels.values())
 
 def save_and_process_playlist(content):
     """Memproses dan menyimpan konten playlist akhir ke file output."""
@@ -67,7 +88,6 @@ def save_and_process_playlist(content):
     try:
         lines = content.splitlines()
         
-        # --- Mengurutkan channel Live Event ---
         live_event = []
         other_channels = []
         current_group = None
@@ -78,7 +98,6 @@ def save_and_process_playlist(content):
                 if match:
                     current_group = match.group(1)
                 
-                # Mengubah nama grup 'SEDANG LIVE' menjadi 'LIVE EVENT'
                 if current_group and current_group.upper() == "SEDANG LIVE":
                     line = line.replace('group-title="SEDANG LIVE"', 'group-title="LIVE EVENT"')
                     current_group = "LIVE EVENT"
@@ -105,10 +124,11 @@ def save_and_process_playlist(content):
         print(f"❌ Gagal menyimpan file: {e}")
         return False
 
-# --- Jalankan proses ---
+# Jalankan proses
 if __name__ == "__main__":
     print("Memulai proses pembuatan playlist...")
     final_content = fetch_and_combine_sources()
     if final_content:
         save_and_process_playlist(final_content)
     print("Proses selesai.")
+        
