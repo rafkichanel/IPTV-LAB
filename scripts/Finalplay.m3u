@@ -1,7 +1,0 @@
-#EXTM3U
-#EXTINF:-1, Channel 1
-https://iptv-org.github.io/iptv/index.m3u
-#EXTINF:-1, Channel 2
-http://epg.it999.ru/all.m3u
-#EXTINF:-1, Channel 3
-https://iptv-org.github.io/iptv/countries/id.m3u
