@@ -25,13 +25,13 @@ jobs:
           pip install requests
 
       - name: Run Python script
-        run: python Scripts/generate_playlist.py
+        run: python scripts/generate_playlist.py
 
       - name: Commit and push changes
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add Finalplay.m3u  # Baris ini yang penting
+          git add Finalplay.m3u
           git commit -m "Auto-update playlist: $(date)" || echo "Tidak ada perubahan"
           git push
           
