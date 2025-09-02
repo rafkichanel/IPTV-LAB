@@ -2,12 +2,24 @@
 #EXTM3U
 #EXTINF:-1  group-title="00_Welcome RAFKI", ðŸŽ‰ Selamat Datang di Playlist RAFKI ðŸŽ¶ | Nikmati hiburan terbaik & jangan lupa subscribe YouTube kami! ðŸ“º
 https://youtu.be/Lt5ubg_h53c?si=aPHoxL6wkKYnhQqr
+#EXTINF:-1  group-title="INDONESIA",RCTI (V+)
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/997ce8767b604fae9fce05379b3b8b3a/index.mpd
+#EXTINF:-1  group-title="INDONESIA",GTV (V+)
+https://d2tjypxxy769fn.cloudfront.net/out/v1/b8b9b1d5f80f45649b4a3619291551ab/index.mpd
+#EXTINF:-1 group-title="INDONESIA" ,iNews (V+)
+https://d2tjypxxy769fn.cloudfront.net/out/v1/7b0404cd6a8a4a908123f10774854e46/index.mpd
+#EXTINF:-1  group-title="INDONESIA", Trans 7 V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/0fd7b7d368bc44bc9b4dece20acc3e33/index.mpd
+#EXTINF:-1  group-title="INDONESIA", Trans TV V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/7a69cfc9e135493f87ac4efd63000429/index.mpd
 #EXTINF:-1  group-title="INDONESIA" , NET TV/MDTV VIP
 https://wahyu1ptv.pages.dev/MDTV-HD.m3u8
 #EXTINF:-1 group-title="INDONESIA" , BTV
 https://btv.secureswiftcontent.com/han/btv/btv10005/srtoutput/manifest.m3u8
 #EXTINF:-1 group-title="INDONESIA" tvg-id="MNCNews.id" tvg-url="https://bit.ly/IndonesiaEpg" ,SindoNews ID
 https://cdn10jtedge.indihometv.com/atm/DASH/mncnews/manifest.mpd
+#EXTINF:-1  group-title="INDONESIA",ANTV V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/0a6c6b1534444ab4bd903af8761e6747/index.mpd
 #EXTINF:-1 tvg-name="CNN INDONESIA"  group-title="INDONESIA",CNN INDONESIA
 http://live.cnnindonesia.com/livecnn/smil:cnntv.smil/chunklist_w2069650134_b280000_sleng.m3u8
 #EXTINF:-1  group-title="INDONESIA",Jawa Pos TV
@@ -132,6 +144,8 @@ https://wahyu1ptv.pages.dev/Sport.TV4-HD.m3u8
 https://wahyu1ptv.pages.dev/Sport.TV5-HD.m3u8
 #EXTINF: -1  group-title="SPORTS HD", Sport.TV6
 https://wahyu1ptv.pages.dev/Sport.TV6-HD.m3u8
+#EXTINF:-1 SHD   group-title="SPORTS HD", BOXING 1
+https://1180885077.rsc.cdn77.org/HLS/BOXINGTV.m3u8
 #EXTINF:-1 SHD   group-title="SPORTS HD", BOXING 2
 http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5417a212ff9fba68282fbf5e/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT={TARGETOPT}&deviceId={PSID}&advertisingId={PSID}&us_privacy=1YNY&samsung_app_domain={APP_DOMAIN}&samsung_app_name={APP_NAME}&profileLimit=&profileFloor=&embedPartner=samsung-tvplus
 #EXTINF:-1 SHD   group-title="SPORTS HD", BOXING 3
@@ -176,10 +190,18 @@ https://247wlive.foxweather.com/stream/index.m3u8
 https://popmi.my.id/tes.m3u8?id=8237
 #EXTINF:-1  group-title="KIDS",VTV
 http://103.226.232.199:9003/play/a0iu/index.m3u8
+#EXTINF:-1 tvg-id="KidsTV.id" tvg-url="https://bit.ly/IndonesiaEpg"  group-title="KIDS",Kids TV V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/9041826689ae4f9c9619576d411fa989/index.mpd
+#EXTINF:-1  group-title="KIDS",ZOOMOO V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/8554b3cb938e44038093df2d65080932/index.mpd
 #EXTINF:-1  group-title="KIDS",BIZNET KIDS HD
 http://livestream.biznetvideo.net/biznet_kids/smil:kids.smil/manifest.mpd?bizkeylivestarttime=0&bizkeyliveendtime=0&bizkeyliveCustomParameter=myParameter&bizkeylivehash=qAri1M2xu_MAlnHwVRtOs24lR8Y_HSDijN2CRNghifUllhYqQSDlkd0qE8CkZwxC
+#EXTINF:-1  group-title="KIDS",BUDDY STAR
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/c70975aaa68d47f2a38799e6730a7816/index.mpd
 #EXTINF:-1  group-title="KIDS",MOONBUG
 https://moonbug-rokuus.amagi.tv/playlist.m3u8
+#EXTINF:-1  group-title="Entertainment & LifeStyle" tvg-id="" , STUDIO UNIVERSAL
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/dc63bd198bc44193b570e0567ff5b22c/index.mpd
 #EXTINF:-1  group-title="Entertainment & LifeStyle",BIZNET LIFESTYLE
 http://livestream.biznetvideo.net/biznet_lifestyle/smil:lifestyle.smil/manifest.mpd?bizkeylivestarttime=0&bizkeyliveendtime=0&bizkeyliveCustomParameter=myParameter&bizkeylivehash=jgDKPclcGdZfvrIDxfMdpT7v_srMWCbubntGo9cCYWpcBBQalMlLQxHswm43PbVR
 #EXTINF:-1 group-title="Entertainment & LifeStyle" ,ARIRANG 2
@@ -194,6 +216,18 @@ https://WahyuIPTV.short.gy/ETVBioskop2.ts
 https://WahyuIPTV.short.gy/ETVBioskop3.ts
 #EXTINF:-1 tvg-id=""  group-title="Premium Movies",ID: Etv Bioskop4
 https://WahyuIPTV.short.gy/ETVBioskop4.ts
+#EXTINF:-1  group-title="Premium Movies",GALAXY PREMIUM
+https://live-channel4-cdn.visionplus.id/out/v1/45c0752c6b6b4397b80243ac9fed96fd/index.mpd
+#EXTINF:-1  group-title="Premium Movies",ORIGINALS HD V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/e992e986a88346c18a5dcc4fbcdae6b9/index.mpd
+#EXTINF:-1  group-title="Premium Movies",CINEEDGE HD V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/47c895ca72544fcfa4221c499b555a10/index.mpd
+#EXTINF:-1  group-title="Premium Movies",SUPERRIX HD V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/782400332c96440598260730a864bc6f/index.mpd
+#EXTINF:-1  group-title="Premium Movies",UNIQUES HD V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/bde0a6d8d3fd4d77ae5093ad2e6699dc/index.mpd
+#EXTINF:-1  group-title="Premium Movies",BUDDY STAR HD V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/c70975aaa68d47f2a38799e6730a7816/index.mpd
 #EXTINF:-1  group-title="HBO",HBO+
 http://superintendent.whatevergos.com:8080/ABDULLAH/aHVzDrpCMh/32934
 #EXTINF:-1  group-title="HBO",HBO 2
@@ -208,6 +242,8 @@ http://212.102.60.231/HBO_FAMILY/index.m3u8
 https://voa-ingest.akamaized.net/hls/live/2033874/tvmc06/playlist_1080.m3u8
 #EXTINF:-1 tvg-name="" tvg-id="BBC World News - [Channel 332].id" tvg-url=""  group-title="News",BBC World V+
 https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist_4300k.m3u8
+#EXTINF:-1 group-title="News" tvg-id="NHKWorldPremium" tvg-url="https://bit.ly/AstroEpg" ,NHK World Premium V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/85b02e02587747058c1940af6aa3d0fa/index.mpd
 #EXTINF:-1  group-title="RELIGI", MedsTV
 https://WahyuIPTV.short.gy/MedsTV-HD.m3u8
 #EXTINF:-1  group-title="RELIGI", SurauTV
@@ -230,6 +266,8 @@ https://mui.siar.us/mui/live/playlist.m3u8
 https://video1.earthcam.com/myearthcam/641f889a7774a38d5fc93dc76c4aeded.flv/playlist.m3u8
 #EXTINF:-1  group-title="RELIGI" ,TV9 HD
 https://5bf7b725107e5.streamlock.net/tv9/tv9/playlist.m3u8
+#EXTINF:-1  group-title="RELIGI" ,TVMU HD
+https://e.siar.us/live/tvmu.m3u8
 #EXTINF:-1 tvg-id=""  tvg-id="" tvg-url=""  group-title="Christian Channels",Catholic TV
 https://catholictvhd-lh.akamaized.net/hls/live/2043390/CTVLiveHD/playlist_4.m3u8
 #EXTINF:-1 tvg-id="LIFE - [Channel 91].id"  tvg-id="LIFE.id" tvg-url="https://bit.ly/IndonesiaEpg"  group-title="Christian Channels",LIFE
@@ -240,6 +278,8 @@ https://mam.jogjaprov.go.id:1937/tv/jitv/chunklist_w163357330.m3u8
 https://re1.siar.us/madutv/hd720/playlist.m3u8
 #EXTINF:-1  group-title="TV LOKAL",Bandung TV
 http://202.150.153.254:65500/bandungtvWEBSITE.m3u8
+#EXTINF:-1 group-title="TV LOKAL" tvg-id="BandungTV.id" tvg-url="https://bit.ly/JejeVisionEPG" ,Bandung TV V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/f16b53f0d5ed459da208c459049c9bb0/index.mpd
 #EXTINF:-1  group-title="TV LOKAL",TATV
 https://tatv.siar.us/tatv/live.sdp/playlist.m3u8
 #EXTINF:-1  group-title="TV LOKAL",Sangaji TV
@@ -256,6 +296,8 @@ https://5bf7b725107e5.streamlock.net:443/kstv/kstv/playlist.m3u8
 https://v10.siar.us/rctv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="tvg-url=" group-title="TV LOKAL",LINGKAR TV
 https://lingkartv.my.id/hls/lingkartv.m3u8
+#EXTINF:-1 group-title="TV LOKAL" tvg-id="Bali TV" tvg-url="https://www.bevy.be/bevyfiles/indonesiapremium4.xml" ,Bali TV V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/44a2d1ab71a740babb233cf14832c59d/index.mpd
 #EXTINF:-1  group-title="TV LOKAL",Kawanua TV
 https://bauni.my.id/hls/eks53uhf/2_1/index.m3u8?tkn=1008024706
 #EXTINF:-1 group-title="TV LOKAL" tvg-url="https://bit.ly/JejeVisionEPG" ,JITV Jogja
@@ -326,6 +368,8 @@ https://ott-balancer.tvri.go.id/live/eds/Sumsel/hls/Sumsel.m3u8
 https://ott-balancer.tvri.go.id/live/eds/Sumut/hls/Sumut.m3u8
 #EXTINF:-1  group-title="TVRI Daerah",TVRI Yogyakarta
 https://ott-balancer.tvri.go.id/live/eds/Jogjakarta/hls/Jogjakarta.m3u8
+#EXTINF:-1 tvg-id="MusicTV.id" tvg-url="https://bit.ly/IndonesiaEpg"  group-title="Music",Music TV
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/c20d75deb06f401aa89681a9e5054de7/index.mpd
 #EXTINF:-1 group-title="Music" ,BAHANA RADIO MUSIC
 https://5bf7b725107e5.streamlock.net/bahanaradio/bahanaradio/playlist.m3u8
 #EXTINF:-1 group-title="Music" , MIC TV
@@ -366,8 +410,76 @@ https://lightning-now70s-samsungnz.amagi.tv/playlist.m3u8
 https://lightning-now80s-samsungnz.amagi.tv/playlist.m3u8
 #EXTINF:-1  tvg-name=""  group-title="Music",NOW Rock
 https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="GTV.id" tvg-name="GTV"  group-title="VISION+ ", GTV V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/b8b9b1d5f80f45649b4a3619291551ab/index.mpd
+#EXTINF:-1 tvg-id="KompasTV.id" tvg-name="Kompas TV"  group-title="VISION+ ", Kompas TV V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/dafcaf8b26064ae7b27702088240b535/index.mpd
+#EXTINF:-1 tvg-id="iNews.id" tvg-name="iNews"  group-title="VISION+ ", iNews V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/7b0404cd6a8a4a908123f10774854e46/index.mpd
+#EXTINF:-1 tvg-id="MDTV.id" tvg-name="MDTV"  group-title="VISION+ ", MDTV V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/6941abe8211d4ce8bd13d9b96bdd1630/index.mpd
+#EXTINF:-1 tvg-id="MNCTV.id" tvg-name="MNCTV"  group-title="VISION+ ", MNCTV V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/d6b026ad50f14b7f9af5ddd5450007d4/index.mpd
+#EXTINF:-1 tvg-id="MetroTV.my.id" tvg-name="MetroTV"  group-title="VISION+ ", Metro TV V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/fd4360b1c12c4375848c8f085fd51d41/index.mpd
+#EXTINF:-1 tvg-id="RCTI.id" tvg-name="RCTI"  group-title="VISION+ ", RCTI V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/997ce8767b604fae9fce05379b3b8b3a/index.mpd
+#EXTINF:-1 tvg-id="RTV.id" tvg-name="RTV"  group-title="VISION+ ", RTV V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/abf3e254818c4608aab8aa109a972203/index.mpd
+#EXTINF:-1 tvg-id="Trans7.my.id" tvg-name="Trans 7"  group-title="VISION+ ", Trans7 V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/0fd7b7d368bc44bc9b4dece20acc3e33/index.mpd
+#EXTINF:-1 tvg-id="tvOne.my.id" tvg-name="TVOne"  group-title="VISION+ ", TVOne V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/f3df48faafaf4198a65b9763140fce30/index.mpd
+#EXTINF:-1 tvg-id="JakTV.id" tvg-name="Jak TV"  group-title="VISION+ ", JakTV V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/1f05c642353a4a778d8a544837e1b49c/index.mpd
+#EXTINF:-1 tvg-id="DAAITV.id" tvg-name="DAAI TV"  group-title="VISION+ ", DAAITV V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/744044c3985142399fbd466f9f3fd8fa/index.mpd
+#EXTINF:-1 tvg-id="JTV.id" tvg-name="JTV"  group-title="VISION+ ", JTV V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/77641c37b4834a9db823ec5137774973/index.mpd
+#EXTINF:-1 tvg-id="" tvg-name="CBeebies HD"  group-title="VISION+ ", CBeebies V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2a5668fb3b9f4e34ab7c02cdc6ef56db/index.mpd
+#EXTINF:-1 tvg-id="DreamWorks.id" tvg-name="Dreamworks HD"  group-title="VISION+ ", Dreamworks V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/7518da9041c4414d86f173daa719152e/index.mpd
+#EXTINF:-1 tvg-id="NickJr.id" tvg-name="Nick Jr."  group-title="VISION+ ", Nick Jr.V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/27163af9499b4bcca2da96677b158efe/index.mpd
+#EXTINF:0 tvg-id="MoonbugKids.us" tvg-name="Moonbug Kids"  group-title="VISION+ ", Moonbug V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/198f7febb48c4c909d62977d88c195b0/index.mpd
+#EXTINF:-1 tvg-id="AXN.id" tvg-name="AXN Asia"  group-title="VISION+ ", AXN V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/456143d3b12140e1a872b25f067ddb62/index.mpd
+#EXTINF:-1 tvg-id="Nickelodeon.id" tvg-name="Nickelodeon"  group-title="VISION+ ", Nickelodeon V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/3fe6d9eb97ed455c942eb8d3d1c2c2e8/index.mpd
+#EXTINF:-1 tvg-id="CelebritiesTV.id" tvg-name="Celebrities TV"  group-title="VISION+ ", Celebrities TV V+
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/8cf72e61626f4361a45c57ce6f2fdad8/index.mpd
+#EXTINF:-1 tvg-id="AnimaxAsia.id" tvg-name="Animax HD"  group-title="VISION+ ", Animax V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/ab3ef0f0e4144c3c8b7e60f1873a3bcc/index.mpd
+#EXTINF:-1 tvg-id="Lifetime.id" tvg-name="Lifetime"  group-title="VISION+ ", LifeTime V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/1880fc1b32d3449196e80345f6cd5918/index.mpd
+#EXTINF:-1 tvg-id="HITS.id" tvg-name="HITS"  group-title="VISION+ ", HITS V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/333a9658ed6a4424a92e319114fb7111/index.mpd
 #EXTINF:-1 tvg-id="VisionPrime.id" tvg-name="Vision Prime"  group-title="VISION+ ", Vision Prime V+
 https://d43tg978oium5.cloudfront.net/out/v1/873c24d3946048f68e459250f1d2fd98/index.mpd
+#EXTINF:-1 tvg-id="RockEntertainment.id" tvg-name="Rock Entertainment"  group-title="VISION+ ", Rock Entertainment V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/4cae4723d4d54a7fb71020bd7939a202/index.mpd
+#EXTINF:-1 tvg-id="Muhammadiyah TV" tvg-name="Muhammadiyah TV"  group-title="VISION+ ", TV MU V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/980cfe26ff00479c97eb8057a1129c7f/index.mpd
+#EXTINF:-1 tvg-id="FightSports.id" tvg-name="Fight Sports"  group-title="VISION+ ", Fight Sports V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTINF:-1 tvg-id="BBCEarth.id" tvg-name="BBC Earth Asia"  group-title="VISION+ ", BBC Earth Asia V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/4e5b2a283adf462c8b6b55b2ef059fac/index.mpd
+#EXTINF:-1 tvg-id="CrimePlusInvestigation.id" tvg-name="Crime Investigation"  group-title="VISION+ ", Crime Investigation V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/384f26c1c3b74ce09fa60bed24719b79/index.mpd
+#EXTINF:-1 tvg-id="LoveNature.id" tvg-name="Love Nature Asia"  group-title="VISION+ ", Love Nature V+
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/15500e8f0dc44058ba0431d39a8fed57/index.mpd
+#EXTINF:-1 tvg-id="MTVLive.id" tvg-name="MTV Live"  group-title="VISION+ ", MTV Live V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/b26eb25311954fcb8ece0c1923c6cce2/index.mpd
+#EXTINF:-1 tvg-id="MusicTV.id" tvg-name="Music TV"  group-title="VISION+ ", Music TV V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/c20d75deb06f401aa89681a9e5054de7/index.mpd
+#EXTINF:-1 tvg-id="KIX.id" tvg-name="KIX"  group-title="VISION+ ", KIX V+
+https://d2tjypxxy769fn.cloudfront.net/out/v1/7a50d44c0a154dd29880c3728fb49a56/index.mpd
+#EXTINF:-1 tvg-id="BBCWorldNews.id" tvg-name="BBC World News"  group-title="VISION+ ", BBC World News V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/7d38a4525dfa42b08a94c22c173061da/index.mpd
+#EXTINF:-1 tvg-id="OneTVAsia.sg" tvg-name="ONE HD"  group-title="VISION+ ", ONE V+
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/9ec31bcce34848d69d4771270ff23ab9/index.mpd
 #EXTINF:-1 tvg-id="TV1" tvg-url="https://bit.ly/RtmEpg"  tvg-url="https://bit.ly/JejeVisionEPG" group-title="Malaysia",TV 1
 https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd
 #EXTINF:-1 tvg-id="TV2"  tvg-url="https://bit.ly/RtmEpg" group-title="Malaysia",TV 2
@@ -608,6 +720,8 @@ http://tv.ctvcamau.vn/live/tv/tv.m3u8
 https://tv.kgtv.vn/live/kgtv/kgtv.m3u8
 #EXTINF:-1  group-title="VIETNAM",  TVK
 https://live.kh.malimarcdn.com/live/tvk.stream/chunklist.m3u8
+#EXTINF:-1  group-title="VIETNAM", LAo Cai
+https://cdn.3ssoft.vn/livetv/laocaitv/laocaitv/index.m3u8
 #EXTINF:-1  group-title="VIETNAM", HAi DUong
 http://truyenhinh.vnptvas.vn/live.m3u8?c=vstv369&q=high&type=tv&location=NA&pkg=pkg11.hni
 #EXTINF:-1  group-title="VIETNAM", ช่อง WION
@@ -1212,8 +1326,6 @@ https://d25tgymtnqzu8s.cloudfront.net/smil:berita/chunklist_b2596000_slENG.m3u8?
 http://cdn.nng.cloudns.us/live/m3u8/id/0c913970f4e0137.m3u8
 #EXTINF:-1 tvg-id="Trace Urban" tvg-name="Trace Urban"  group-title="CHANNEL | MUSIC", Trace Urban
 https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
-#EXTINF:-1  group-title="CHANNEL | MUSIC", MUSIK INDONESIA
-https://cdn08jtedge.indihometv.com/dassdvr/134/musikindo/manifest.mpd
 #EXTINF:-1 tvg-id="tving|C00579" tvg-name="M.net FHD"  group-title="CHANNEL | MUSIC",M.net UHD
 http://warlock0.synology.me:9999/klive/api/url.m3u8?m=web_play&s=tving&i=C00579&q=FHD&apikey=5MY50EII66
 #EXTINF:-1 tvg-id="MusikIndonesia.id" tvg-name="Musik Indonesia"  group-title="CHANNEL | MUSIC", Musik Indonesia
@@ -1232,8 +1344,6 @@ https://cdn10jtedge.indihometv.com/atm/DASH/inews/manifest.mpd
 https://cdn10jtedge.indihometv.com/atm/DASH/mncnews/manifest.mpd
 #EXTINF:-1  group-title="CHANNEL | INDONESIA" tvg-id="IndonesianaTV.id" tvg-name="03. TV Nasional 2", Indonesiana TV
 https://tvstreamcast.com/indonesiana.m3u8
-#EXTINF:-1 group-title="CHANNEL | INDONESIA" ,BLOOMBERG
-https://streaming.indihometv.com/atm/DASH/BLOOMBERG/manifest.mpd
 #EXTINF:-1 tvg-id="BadarTV" tvg-name="BRTV"  group-title="CHANNEL | DAERAH", BRTV
 https://5bf7b725107e5.streamlock.net/brtv/brtv/chunklist_w312881791.m3u8
 #EXTINF:-1 tvg-id="ChannelJowo.id" tvg-name="Channel Jowo"  group-title="CHANNEL | DAERAH", Channel Jowo
@@ -1316,10 +1426,22 @@ https://raw.githubusercontent.com/AqFad2811/randomlivefromyt/main/TheKPOP.m3u8
 https://raw.githubusercontent.com/AqFad2811/randomlivefromyt/main/TheKPOP2.m3u8
 #EXTINF:-1 tvg-id=""  group-title="CHANNEL | MUSIC",MTV Live
 https://bit.ly/46646g0
+#EXTINF:-1 tvg-id="SportStars2.id" tvg-name="Sportstars 2"  group-title="CHANNEL | SPORTS", Sportstars 2 
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/d2c68a3dfb644808b416bd90dcc92d5f/index.mpd
+#EXTINF:-1 tvg-id="SportStars.id" tvg-name="Sportstars"  group-title="CHANNEL | SPORTS", Sportstars 3
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/6f5596513af749c19d0bcdac013dda3c/index.mpd
+#EXTINF:-1 tvg-id="SportStars.id" tvg-name="Sportstars"  group-title="CHANNEL | SPORTS", Sportstars 4 
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1  group-title="CHANNEL | SPORTS",Soccer Channel 
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
 #EXTINF:-1 group-title="CHANNEL | SPORTS" ,R+ LIVE 
 https://d2o5iwa2ppb5z7.cloudfront.net/out/v1/dash/index.mpd
 #EXTINF:-1 group-title="CHANNEL | SPORTS" ,V+ LIVE 2 
 https://d2o5iwa2ppb5z7.cloudfront.net/out/v1/dash/index.mpd
+#EXTINF:-1  group-title="CHANNEL | SPORTS",SPOTV 
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTINF:-1  group-title="CHANNEL | SPORTS",SPOTV 2 
+https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
 #EXTINF:-1 xui-id="{XUI_ID}" tvg-id="AstroPremierLeague3.my" tvg-name="MY | Astro Premier League 3 FHD"  group-title="CHANNEL | SPORTS",MY | Astro Premier League 3 FHD
 http://royalibox.com:80/plcedarkaouishbissm/px6pzjgmf8/1163682
 #EXTINF:-1 xui-id="{XUI_ID}" tvg-id="AstroPremierLeague4.my" tvg-name="MY | Astro Premier League 4 FHD"  group-title="CHANNEL | SPORTS",MY | Astro Premier League 4 FHD
@@ -1370,6 +1492,8 @@ http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5ebc8688f3697d00072f7c
 http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5417a212ff9fba68282fbf5e/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT={TARGETOPT}&deviceId={PSID}&advertisingId={PSID}&us_privacy=1YNY&samsung_app_domain={APP_DOMAIN}&samsung_app_name={APP_NAME}&profileLimit=&profileFloor=&embedPartner=samsung-tvplus
 #EXTINF:-1 group-title="CHANNEL | SPORTS" , PFL MMA
 http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/6334a574605f140007e233c4/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT={TARGETOPT}&deviceId={PSID}&advertisingId={PSID}&us_privacy=1YNY&samsung_app_domain={APP_DOMAIN}&samsung_app_name={APP_NAME}&profileLimit=&profileFloor=&embedPartner=samsung-tvplus
+#EXTINF:-1 group-title="CHANNEL | SPORTS" , Boxing TV
+https://1180885077.rsc.cdn77.org/HLS/BOXINGTV_SCTE.m3u8
 #EXTINF:-1  group-title="CHANNEL | SPORTS",Combate
 https://wahyu1ptv.pages.dev/Combate-HD.m3u8
 #EXTINF:-1  group-title="CHANNEL | SPORTS", POLSAT SPORT PREMIUM 1
@@ -1482,6 +1606,8 @@ http://boski.streamtv.to:8080/Jeffrey2905/xy86trUDpl/62261
 http://boski.streamtv.to:8080/Jeffrey2905/xy86trUDpl/62229
 #EXTINF:-1 tvg-id="Horee.id" tvg-name="Horee"  group-title="CHANNEL | KIDS", Horee 🔵
 http://boski.streamtv.to:8080/Jeffrey2905/xy86trUDpl/62233
+#EXTINF:-1 tvg-id="MentariTV.id" tvg-name="Mentari TV"  group-title="CHANNEL | KIDS", Mentari TV
+https://cdn08jtedge.indihometv.com/dassdvr/134/mentaritv/manifest.mpd
 #EXTINF:-1 tvg-id="disneychannel" tvg-name="__"  group-title="CHANNEL | KIDS",Disney Channel
 https://a77aivottepl-a.akamaihd.net/pdx-nitro/live/clients/dash/enc/zuf794yutz/out/v1/ca3534bfe4f148298b36719204d108e0/cenc.mpd
 #EXTINF:-1 tvg-id="disneyjunior" tvg-name="__"  group-title="CHANNEL | KIDS",Disney Junior
@@ -1496,8 +1622,24 @@ https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="DENSFoodChannel.id" tvg-name="DENS Food Channel"  group-title="CHANNEL | LIFESTYLE", DensFood Channel
 http://cdn.nng.cloudns.us/live/m3u8/id/dfc160946781414.m3u8
+#EXTINF:-1 tvg-id="Animax.id" group-title="CHANNEL | LIFESTYLE" ,Animax
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/ab3ef0f0e4144c3c8b7e60f1873a3bcc/index.mpd
+#EXTINF:-1 tvg-id="OKTV.id" group-title="CHANNEL | LIFESTYLE" ,Food Travel
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/77d7eac1b90247ac9aa745bd2eb47fa8/index.mpd
+#EXTINF:-1 tvg-id="Ent.id" group-title="CHANNEL | LIFESTYLE" ,Ent
+https://d2tjypxxy769fn.cloudfront.net/out/v1/a90cb773466446b08595007bab12b920/index.mpd
+#EXTINF:-1 tvg-id="tvN.id" group-title="CHANNEL | LIFESTYLE" ,tvN Asia
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/6dc5412d26ea4e65961c825d866f2a34/index.mpd
+#EXTINF:-1 tvg-id="ONE.id" group-title="CHANNEL | LIFESTYLE" ,ONE
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/9ec31bcce34848d69d4771270ff23ab9/index.mpd
+#EXTINF:-1 tvg-id="KIX.id" group-title="CHANNEL | LIFESTYLE" ,KIX
+https://d2tjypxxy769fn.cloudfront.net/out/v1/7a50d44c0a154dd29880c3728fb49a56/index.mpd
+#EXTINF:-1 tvg-id="AXN.id" group-title="CHANNEL | LIFESTYLE" ,AXN
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/456143d3b12140e1a872b25f067ddb62/index.mpd
 #EXTINF:-1 tvg-id="VisionPrime.id" group-title="CHANNEL | LIFESTYLE" ,Vision Prime
 https://d43tg978oium5.cloudfront.net/out/v1/873c24d3946048f68e459250f1d2fd98/index.mpd
+#EXTINF:-1 tvg-id="ROCKEntertainment.id" group-title="CHANNEL | LIFESTYLE" ,Rock Entertainment
+https://d2tjypxxy769fn.cloudfront.net/out/v1/4cae4723d4d54a7fb71020bd7939a202/index.mpd
 #EXTINF:-1 tvg-id="" group-title="CHANNEL | LIFESTYLE" ,The Indonesia Channel
 https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c6857f48ecd2017f6ec01d7f0d4f/manifest.mpd
 #EXTINF:-1 tvg-id="" group-title="CHANNEL | LIFESTYLE" ,Insert
@@ -1508,6 +1650,8 @@ https://cdnjkt913.transvision.co.id:1000/live/master/4/4028c6856fd0d66d017034201
 https://cdnjkt913.transvision.co.id:1000/live/master/100/4028c685840ff04901845606fc274367/manifest.mpd
 #EXTINF:-1 group-title="CHANNEL | LIFESTYLE" ,Travel TV
 https://cdnjkt913.transvision.co.id:1000/live/master/3/4028c6857fe540a1018060aab83c40b9/manifest.mpd
+#EXTINF:-1 tvg-id="Ie.id" group-title="CHANNEL | LIFESTYLE" ,Celebrities TV
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/8cf72e61626f4361a45c57ce6f2fdad8/index.mpd
 #EXTINF:-1 tvg-id="LifestyleandFashion.id" group-title="CHANNEL | LIFESTYLE" ,Hanacaraka TV
 https://d1vckova5fh9mt.cloudfront.net/out/v1/17c724036c5f4615bd0b8093126b5c44/index.mpd
 #EXTINF:-1 tvg-id="FoxSports1.us" tvg-name="FS1"  group-title="CHANNEL | USA TV", FS1
