@@ -6,7 +6,7 @@ on:
       - main
   schedule:
     - cron: '0 0 * * *' # Menjalankan setiap hari pada tengah malam UTC
-  workflow_dispatch: # Mengaktifkan eksekusi manual
+  workflow_dispatch: # Trigger untuk menjalankan secara manual
 
 jobs:
   build:
@@ -32,7 +32,6 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add Finalplay.m3u
+          git add scripts/Finalplay.m3u # Mengubah ini agar sesuai dengan lokasi file
           git commit -m "Auto-update playlist: $(date)" || echo "Tidak ada perubahan"
           git push
-          
