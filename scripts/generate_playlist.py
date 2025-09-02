@@ -5,7 +5,10 @@ from datetime import datetime
 
 # URL sumber M3U yang ingin Anda gunakan (ubah ini sesuai kebutuhan)
 SOURCE_URL = "https://iptv-org.github.io/iptv/index.m3u"
-OUTPUT_FILE = "Finalplay.m3u"
+
+# Lokasi file output
+# Skrip akan membuat Finalplay.m3u di folder yang sama dengan skrip ini
+OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Finalplay.m3u")
 
 def process_single_playlist(source_url, output_file):
     """
@@ -17,14 +20,10 @@ def process_single_playlist(source_url, output_file):
         r.raise_for_status()
         lines = r.text.splitlines()
 
-        # --- Logika Pemfilteran ---
+        # --- Filter di awal (dipertahankan) ---
         # Menghapus baris yang berkaitan dengan "WHATSAPP"
         lines = [line for line in lines if "WHATSAPP" not in line.upper()]
         
-        # Contoh filter lain (jika diperlukan)
-        # lines = [line.replace("🔴", "") for line in lines]
-        # lines = [line for line in lines if 'group-title="SMA"' not in line]
-
         # --- Logika penghapusan logo UNIVERSAL ---
         cleaned_lines = []
         for line in lines:
@@ -72,9 +71,9 @@ def process_single_playlist(source_url, output_file):
         print(f"❗ Gagal mengambil data dari {source_url}: {e}")
         return False
     except Exception as e:
-        print(f"❌ Terjadi kesalahan saat memproses: {e}")
+        print(f"❌ Terjadi kesalahan tak terduga: {e}")
         return False
 
 # --- Jalankan proses ---
-process_single_playlist(SOURCE_URL, OUTPUT_FILE)
-        
+if __name__ == "__main__":
+    process_single_playlist(SOURCE_URL, OUTPUT_FILE)
