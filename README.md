@@ -28,3 +28,8 @@ Playlist diperbarui **otomatis setiap 6 jam** menggunakan GitHub Actions.
 
 ## ▶️ Cara Pakai
 1. Copy link playlist berikut ke aplikasi IPTV favorit (misal: VLC, IPTV Smarters, Tivimate, dll):
+https://raw.githubusercontent.com/rafkichanel/iptv-lab/main/Finalplay.m3u
+
+
+
+
