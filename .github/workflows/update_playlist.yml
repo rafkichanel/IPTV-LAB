@@ -1,0 +1,36 @@
+name: Update Final Playlist
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *' # Menjalankan setiap hari pada tengah malam UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run Python script
+        run: python nama_file_skrip_anda.py # Ganti dengan nama file skrip Python Anda
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add Finalplay.m3u
+          git commit -m "Auto-update playlist: $(date)" || echo "Tidak ada perubahan"
+          git push
