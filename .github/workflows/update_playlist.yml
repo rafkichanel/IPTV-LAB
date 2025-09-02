@@ -6,6 +6,7 @@ on:
       - main
   schedule:
     - cron: '0 0 * * *' # Menjalankan setiap hari pada tengah malam UTC
+  workflow_dispatch: # Mengaktifkan eksekusi manual
 
 jobs:
   build:
