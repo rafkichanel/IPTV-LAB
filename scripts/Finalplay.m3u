@@ -1270,6 +1270,8 @@ https://cloud.hownetwork.xyz//yyy/8665ae13517f4c4059edc0df0c5463bd/25/480.m3u8
 https://cloud.hownetwork.xyz//yyy/JxU5ejFURXFwZFo7JlIyNB0gFn8jTRZzITJA/33/480.m3u8
 #EXTINF:-1 type="" group-title="MOVIES VOD" , Mumu (2025)
 https://cloud.hownetwork.xyz//yyy/Lw0kO2hLR3N3fAApIVQ6BxoneXYmQRUkJmY/33/480.m3u8
+#EXTINF:-1 tvg-name="NBA TV"  group-title="CHANNEL | SPORT INDO",NBA TV (Indi)
+https://cdn08jtedge.indihometv.com/dassdvr/133/nba/manifest.mpd
 #EXTINF:-1 tvg-id="" tvg-name=""  group-title="CHANNEL | SPORT INDO", Premier League TV
 https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc1021n07j)/master.mpd
 #EXTINF:-1  group-title="CHANNEL | SPORT INDO",Golf+
