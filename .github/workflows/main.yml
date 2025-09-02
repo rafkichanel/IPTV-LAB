@@ -3,33 +3,42 @@ name: Auto Update IPTV
 on:
   schedule:
     - cron: "0 */6 * * *"   # jalan tiap 6 jam
-  workflow_dispatch:         # bisa dijalankan manual
+  workflow_dispatch:        # bisa dijalankan manual
+
+permissions:
+  contents: write           # penting! biar bisa push ke repo
 
 jobs:
-  update:
+  update-playlist:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.x"
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run generator script
+      - name: Run playlist script
         run: |
-          python scripts/generate_playlist.py
+          python script.py   # pastikan file python kamu namanya script.py
 
-      - name: Commit & Push changes
+      - name: Commit changes
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "🔄 Auto update playlist [$(date +'%Y-%m-%d %H:%M:%S')]" || echo "✅ Tidak ada perubahan"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Finalplay.m3u last_update.txt || true
+          git commit -m "🔄 Auto update playlist [$(date '+%Y-%m-%d %H:%M:%S')]" || echo "No changes to commit"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
