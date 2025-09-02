@@ -21,8 +21,10 @@ def fetch_and_combine_sources():
             print(f"Mengambil: {url}")
             response = requests.get(url, timeout=10)
             response.raise_for_status()
-            # Menghilangkan header #EXTM3U dari setiap sumber agar tidak ada duplikat header
-            content_without_header = "\n".join(line for line in response.text.splitlines() if line.strip() and not line.strip().startswith("#EXTM3U"))
+            
+            # Memproses konten dan menghapus header #EXTM3U dari setiap sumber
+            lines = response.text.splitlines()
+            content_without_header = "\n".join(line for line in lines if line.strip() and not line.strip().startswith("#EXTM3U"))
             combined_content += content_without_header + "\n"
         except Exception as e:
             print(f"Gagal mengambil {url}: {e}")
@@ -45,4 +47,4 @@ if __name__ == "__main__":
     content = fetch_and_combine_sources()
     save_playlist(content)
     save_last_update()
-            
+    
