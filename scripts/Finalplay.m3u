@@ -172,8 +172,6 @@ http://superintendent.whatevergos.com:8080/ABDULLAH/aHVzDrpCMh/142761
 http://superintendent.whatevergos.com:8080/ABDULLAH/aHVzDrpCMh/142752
 #EXTINF:-1 group-title="SPORTS HD" ,BEIN 9 
 http://superintendent.whatevergos.com:8080/ABDULLAH/aHVzDrpCMh/142734
-#EXTINF:-1  group-title="KNOWLEDGE & DOCUMENTARY",Curiosity
-https://cdn08jtedge.indihometv.com/dassdvr/194/curiosity/manifest.mpd
 #EXTINF:-1  group-title="KNOWLEDGE & DOCUMENTARY",ABC
 https://content.uplynk.com/channel/ext/4413701bf5a1488db55b767f8ae9d4fa/kgo_24x7_news.m3u8
 #EXTINF:-1  group-title="KNOWLEDGE & DOCUMENTARY",Earth Touch tv
@@ -282,12 +280,18 @@ http://202.150.153.254:65500/bandungtvWEBSITE.m3u8
 https://d3b0v7fggu5zwm.cloudfront.net/out/v1/f16b53f0d5ed459da208c459049c9bb0/index.mpd
 #EXTINF:-1  group-title="TV LOKAL",TATV
 https://tatv.siar.us/tatv/live.sdp/playlist.m3u8
-#EXTINF:-1  group-title="TV LOKAL",Sangaji TV
-https://cdn.gunadarma.ac.id/streams/sangajitv/ingestsangajitv.m3u8
+#EXTINF:-1  group-title="TV LOKAL",Semarang TV
+http://116.254.112.74:80/hls/cakralive.m3u8
 #EXTINF:-1 group-title="TV LOKAL" ,Surabaya TV
 https://e.siar.us/live/surabayatv.m3u8
 #EXTINF:-1  group-title="TV LOKAL",Banjar TV
 https://banjartv.siar.us/banjartv/live/playlist.m3u8
+#EXTINF:-1  group-title="TV LOKAL",Prima TV
+https://primatv.siar.us/primatv/live/playlist.m3u8
+#EXTINF:-1  group-title="TV LOKAL",Banten TV
+https://5bf7b725107e5.streamlock.net/bantentv/bantentv/playlist.m3u8
+#EXTINF:-1  group-title="TV LOKAL",BMS TV
+https://5bf7b725107e5.streamlock.net/bmstv/bmstv/playlist.m3u8
 #EXTINF:-1  group-title="TV LOKAL",Dhamma TV
 https://b.webcache.maxindo.net.id/dhamma/dhamma.m3u8
 #EXTINF:-1 group-title="TV LOKAL" tvg-id="" tvg-url="https://bit.ly/JejeVisionEPG" ,Kilisuci TV Kediri
@@ -308,6 +312,8 @@ https://jawapostv.siar.us/jawapostv/live/playlist.m3u8
 https://dhohotv.siar.us/dhohotv/live/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:-1 tvg-id=""  group-title="TV LOKAL",TV Tabalong
 https://5bf7b725107e5.streamlock.net/tvtabalong/tvtabalong/playlist.m3u8
+#EXTINF:-1  group-title="TV LOKAL",Bungo TV
+https://5bf7b725107e5.streamlock.net/bungotv/bungotv/playlist.m3u8
 #EXTINF:-1  group-title="TVRI Daerah",TVRI Aceh
 https://ott-balancer.tvri.go.id/live/eds/Aceh/hls/Aceh.m3u8
 #EXTINF:-1  group-title="TVRI Daerah",TVRI Bali
@@ -566,30 +572,10 @@ https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGN
 https://cdn-live1.qvc.jp/iPhone/1501/1501.m3u8
 #EXTINF:-1 group-title="JAPAN" tvg-id="NHKWorldPremium.jp" ,NHK World Premium
 https://cdn.skygo.mn/live/disk1/NHK_World_Premium/HLSv3-FTA/NHK_World_Premium.m3u8
-#EXTINF:-1 group-title="CHINA" , SHENZEN TV
-https://cdn08jtedge.indihometv.com/dassdvr/130/shenzen/manifest.mpd
-#EXTINF:-1 group-title="CHINA" , ZHEJIANG TV
-https://cdn08jtedge.indihometv.com/dassdvr/130/zhejiang/manifest.mpd
 #EXTINF:-1  group-title="CHINA",NTD 新唐人大陸台
 http://cnhls.ntdtv.com/cn/live800/playlist.m3u8
 #EXTINF:-1  group-title="CHINA", CCTV+
 http://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/chunklist_w1018196661_b1000000.m3u8
-#EXTINF:-1  group-title="CHINA",浙江新闻
-https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8
-#EXTINF:-1  group-title="CHINA",浙江国际
-https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8
-#EXTINF:-1  group-title="CHINA",浙江少儿
-https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8
-#EXTINF:-1  group-title="CHINA",浙江教科
-https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
-#EXTINF:-1  group-title="CHINA",之江纪录
-https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
-#EXTINF:-1  group-title="CHINA",浙江民生
-https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
-#EXTINF:-1  group-title="CHINA",浙江经济
-https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
-#EXTINF:-1  group-title="CHINA",浙江钱江
-https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
 #EXTINF:-1  group-title="THAILAND", CHANNEL 8 TH
 http://vip.login.in.th:1935/ch8/ch8/playlist.m3u8
 #EXTINF:-1 tvg-id="DLTV1.th"  group-title="THAILAND",DLTV 1
@@ -732,10 +718,12 @@ http://hoabinhtvlive.746b3ddb.cdnviet.com/hoabinhtv/chunklist.m3u8
 https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&q=high&type=tv&location=NA&pkg=pkg11.hni
 #EXTINF:-1  group-title="VIETNAM", BAc KAn
 https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv360&q=high&type=tv&location=NA&pkg=pkg11.hni
+#EXTINF:-1  group-title="VIETNAM", CAn ThO
+https://live.canthotv.vn/live/tv/chunklist.m3u8
 #EXTINF:-1  group-title="VIETNAM",  DRT HD | TH Đắk Lắk
 https://cdn.drt.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8
-#EXTINF:-1  group-title="VIETNAM", Quang Nam
-https://beta.qrt.vn/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
+#EXTINF:-1  group-title="VIETNAM",  THTPCT HD | TH Cần Thơ
+https://live.canthotv.vn/live/tv/chunklist.m3u8
 #EXTINF:-1  group-title="VIETNAM",  THHN HD | TH Hà Nam
 https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8
 #EXTINF:-1  group-title="VIETNAM",  HTTV HD | TH Hà Tĩnh
@@ -1270,8 +1258,6 @@ https://cloud.hownetwork.xyz//yyy/8665ae13517f4c4059edc0df0c5463bd/25/480.m3u8
 https://cloud.hownetwork.xyz//yyy/JxU5ejFURXFwZFo7JlIyNB0gFn8jTRZzITJA/33/480.m3u8
 #EXTINF:-1 type="" group-title="MOVIES VOD" , Mumu (2025)
 https://cloud.hownetwork.xyz//yyy/Lw0kO2hLR3N3fAApIVQ6BxoneXYmQRUkJmY/33/480.m3u8
-#EXTINF:-1 tvg-name="NBA TV"  group-title="CHANNEL | SPORT INDO",NBA TV (Indi)
-https://cdn08jtedge.indihometv.com/dassdvr/133/nba/manifest.mpd
 #EXTINF:-1 tvg-id="" tvg-name=""  group-title="CHANNEL | SPORT INDO", Premier League TV
 https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc1021n07j)/master.mpd
 #EXTINF:-1  group-title="CHANNEL | SPORT INDO",Golf+
@@ -1588,6 +1574,10 @@ https://thaipbs-live.cdn.byteark.com/live/playlist_720p/index.m3u8
 https://vdo.plathong.net/wowza/muslimonair1/live/playlist.m3u8
 #EXTINF:-1 group-title="CHANNEL | CHINA" , XING KONG TV
 https://dl.dropboxusercontent.com/scl/fi/rrxb2v21qox1na9onp419/XING_KONG_TV.m3u8?rlkey=s9vs6qgbpfnvum4un2of904wm
+#EXTINF:-1 group-title="CHANNEL | CHINA" , SHENZEN TV
+https://cdn08jtedge.indihometv.com/dassdvr/130/shenzen/manifest.mpd
+#EXTINF:-1 group-title="CHANNEL | CHINA" , ZHEJIANG TV
+https://cdn08jtedge.indihometv.com/dassdvr/130/zhejiang/manifest.mpd
 #EXTINF:-1 tvg-id="PhoenixChineseChannel.hk"  group-title="CHANNEL | CHINA", PHOENIX CHINESE CHANNEL
 https://dl.dropboxusercontent.com/scl/fi/q4fqnkqjr2k5uro06aix1/phoenixchn.m3u8?rlkey=sek2n1fhk9r92np2u4gvhxyb7
 #EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk"  group-title="CHANNEL | CHINA",PHOENIX INFO NEWS
@@ -1608,8 +1598,6 @@ http://boski.streamtv.to:8080/Jeffrey2905/xy86trUDpl/62261
 http://boski.streamtv.to:8080/Jeffrey2905/xy86trUDpl/62229
 #EXTINF:-1 tvg-id="Horee.id" tvg-name="Horee"  group-title="CHANNEL | KIDS", Horee 🔵
 http://boski.streamtv.to:8080/Jeffrey2905/xy86trUDpl/62233
-#EXTINF:-1 tvg-id="MentariTV.id" tvg-name="Mentari TV"  group-title="CHANNEL | KIDS", Mentari TV
-https://cdn08jtedge.indihometv.com/dassdvr/134/mentaritv/manifest.mpd
 #EXTINF:-1 tvg-id="disneychannel" tvg-name="__"  group-title="CHANNEL | KIDS",Disney Channel
 https://a77aivottepl-a.akamaihd.net/pdx-nitro/live/clients/dash/enc/zuf794yutz/out/v1/ca3534bfe4f148298b36719204d108e0/cenc.mpd
 #EXTINF:-1 tvg-id="disneyjunior" tvg-name="__"  group-title="CHANNEL | KIDS",Disney Junior
