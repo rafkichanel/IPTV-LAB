@@ -1,50 +1,54 @@
 import json
-from flask import Flask, request, jsonify, Response
+import requests
 
-app = Flask(__name__)
+# === BACA DAFTAR USER ===
+try:
+    with open("users.json", "r") as f:
+        USERS = json.load(f)
+except FileNotFoundError:
+    print("❌ users.json tidak ditemukan")
+    USERS = []
 
-# Baca daftar user dari users.json
-with open("users.json", "r") as f:
-    USERS = {u["username"]: u["password"] for u in json.load(f)}
+# === BACA DAFTAR SUMBER ===
+try:
+    with open("sources.txt", "r") as f:
+        sources = [line.strip() for line in f if line.strip()]
+except FileNotFoundError:
+    print("❌ sources.txt tidak ditemukan")
+    sources = []
 
-# Baca playlist.m3u
-with open("playlist.m3u", "r", encoding="utf-8") as f:
-    PLAYLIST = f.read()
+# === GABUNGKAN SEMUA PLAYLIST ===
+playlist_content = "#EXTM3U\n"
 
-@app.route("/player_api.php")
-def player_api():
-    username = request.args.get("username")
-    password = request.args.get("password")
+for url in sources:
+    try:
+        r = requests.get(url, timeout=15)
+        if r.status_code == 200:
+            playlist_content += r.text + "\n"
+            print(f"[OK] {url}")
+        else:
+            print(f"[FAIL] {url} -> {r.status_code}")
+    except Exception as e:
+        print(f"[ERROR] {url} -> {e}")
 
-    if username not in USERS or USERS[username] != password:
-        return jsonify({"user_info": {"auth": 0, "status": "false"}})
+# === SIMPAN PLAYLIST FINAL ===
+with open("playlist.m3u", "w", encoding="utf-8") as f:
+    f.write(playlist_content)
 
-    action = request.args.get("action")
+# === GENERATE DATA XTREAM ===
+xtream_data = {
+    "user_info": [
+        {
+            "username": u.get("username"),
+            "password": u.get("password"),
+            "status": "Active"
+        }
+        for u in USERS
+    ],
+    "playlist_url": "playlist.m3u"
+}
 
-    # Info login
-    if not action:
-        return jsonify({
-            "user_info": {
-                "auth": 1,
-                "status": "Active",
-                "username": username,
-                "password": password
-            },
-            "server_info": {
-                "url": request.host_url.strip("/"),
-                "port": 80,
-                "https_port": 443,
-                "server_protocol": "http",
-                "rtmp_port": "0",
-                "timezone": "GMT+0"
-            }
-        })
+with open("xtream.json", "w", encoding="utf-8") as f:
+    json.dump(xtream_data, f, indent=2)
 
-    # Playlist dalam format M3U
-    if action == "get_live_streams":
-        return Response(PLAYLIST, mimetype="audio/x-mpegurl")
-
-    return jsonify({"error": "unknown action"})
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+print("✅ playlist.m3u dan xtream.json berhasil dibuat")
