@@ -1,15 +1,15 @@
-name: Update IPTV Playlist + Xtream
+name: Generate Xtream API
 
 on:
   schedule:
-    - cron: '0 */3 * * *'   # update tiap 3 jam
-  workflow_dispatch:        # bisa run manual
+    - cron: '0 */3 * * *'   # jalan tiap 3 jam
+  workflow_dispatch:        # bisa run manual lewat UI
 
 permissions:
   contents: write
 
 jobs:
-  update-playlist:
+  generate-xtream:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,10 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Generate Main Playlist
-        run: python update_playlist.py
-
-      - name: Generate Xtream Static API
+      - name: Generate Xtream API
         run: python generate_xtream.py
 
       - name: Commit and Push changes
@@ -35,5 +32,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Auto update playlist + Xtream API"
+          git commit -m "Auto update Xtream API"
           git push
