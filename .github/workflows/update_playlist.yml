@@ -25,7 +25,7 @@ jobs:
         run: pip install requests
 
       - name: Generate Main Playlist
-        run: python scripts/update_playlist.py
+        run: python update_playlist.py
 
       - name: Generate Xtream API
         run: python generate_xtream.py
