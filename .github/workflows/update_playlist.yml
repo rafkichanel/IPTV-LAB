@@ -2,8 +2,8 @@ name: Update IPTV Playlist + Xtream
 
 on:
   schedule:
-    - cron: '0 */3 * * *'   # update tiap 3 jam sekali
-  workflow_dispatch:        # bisa dijalankan manual lewat GitHub UI
+    - cron: '0 */3 * * *'   # update tiap 3 jam
+  workflow_dispatch:        # bisa run manual
 
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
       - name: Generate Main Playlist
         run: python update_playlist.py
 
-      - name: Generate Xtream API
+      - name: Generate Xtream Static API
         run: python generate_xtream.py
 
       - name: Commit and Push changes
