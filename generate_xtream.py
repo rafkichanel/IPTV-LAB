@@ -14,46 +14,21 @@ except FileNotFoundError:
     USERS = []
 
 # ===============================
-# 2. AMBIL DAFTAR NEGARA & KATEGORI DARI IPTV-ORG
+# 2. BACA DAFTAR SUMBER DARI sources.txt
 # ===============================
-BASE_URL = "https://iptv-org.github.io/iptv/"
+try:
+    with open("sources.txt", "r") as f:
+        sources = [line.strip() for line in f if line.strip()]
+except FileNotFoundError:
+    print("❌ sources.txt tidak ditemukan")
+    sources = []
 
-# Ambil daftar negara
-countries_url = BASE_URL + "countries.json"
-categories_url = BASE_URL + "categories.json"
-
-def fetch_json(url):
-    try:
-        r = requests.get(url, timeout=15)
-        if r.status_code == 200:
-            return r.json()
-        else:
-            print(f"[FAIL] {url} -> {r.status_code}")
-            return {}
-    except Exception as e:
-        print(f"[ERROR] {url} -> {e}")
-        return {}
-
-countries = fetch_json(countries_url)  # dict of {"id": "Indonesia", ...}
-categories = fetch_json(categories_url)  # dict of {"news": "News", ...}
+if not sources:
+    print("⚠️ Tidak ada sumber di sources.txt, skrip berhenti.")
+    exit()
 
 # ===============================
-# 3. GENERATE SEMUA LINK M3U
-# ===============================
-sources = []
-
-# Tambahkan semua negara
-for code in countries.keys():
-    sources.append(f"{BASE_URL}countries/{code}.m3u")
-
-# Tambahkan semua kategori
-for cat in categories.keys():
-    sources.append(f"{BASE_URL}categories/{cat}.m3u")
-
-print(f"🔹 Total sources: {len(sources)}")
-
-# ===============================
-# 4. GABUNGKAN PLAYLIST
+# 3. GABUNGKAN PLAYLIST
 # ===============================
 playlist_content = "#EXTM3U\n"
 
@@ -65,7 +40,6 @@ for url in sources:
                 text = r.text
 
                 # HAPUS LOGO DEFAULT, GANTI DENGAN NAMA CHANNEL
-                # Jika ada tvg-name, gunakan untuk logo
                 text = re.sub(
                     r'LOGO=".*?"',
                     lambda m: f'LOGO="{re.search(r"tvg-name=\"(.*?)\"", m.string).group(1) if re.search(r"tvg-name=\"(.*?)\"", m.string) else ""}"',
@@ -82,13 +56,13 @@ for url in sources:
             time.sleep(3)
 
 # ===============================
-# 5. SIMPAN PLAYLIST FINAL
+# 4. SIMPAN PLAYLIST FINAL
 # ===============================
 with open("playlist.m3u", "w", encoding="utf-8") as f:
     f.write(playlist_content)
 
 # ===============================
-# 6. GENERATE XTREAM JSON
+# 5. GENERATE XTREAM JSON
 # ===============================
 xtream_data = {
     "user_info": [
