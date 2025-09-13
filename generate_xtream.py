@@ -7,7 +7,7 @@ import time
 # 1. BACA DAFTAR USER
 # ===============================
 try:
-    with open("users.json", "r") as f:
+    with open("users.json", "r", encoding="utf-8") as f:
         USERS = json.load(f)
 except FileNotFoundError:
     print("❌ users.json tidak ditemukan")
@@ -17,7 +17,7 @@ except FileNotFoundError:
 # 2. BACA DAFTAR SUMBER DARI sources.txt
 # ===============================
 try:
-    with open("sources.txt", "r") as f:
+    with open("sources.txt", "r", encoding="utf-8") as f:
         sources = [line.strip() for line in f if line.strip()]
 except FileNotFoundError:
     print("❌ sources.txt tidak ditemukan")
@@ -39,14 +39,16 @@ for url in sources:
             if r.status_code == 200:
                 text = r.text
 
-                # HAPUS LOGO DEFAULT, GANTI DENGAN NAMA CHANNEL
-                text = re.sub(
-                    r'LOGO=".*?"',
-                    lambda m: f'LOGO="{re.search(r"tvg-name=\"(.*?)\"", m.string).group(1) if re.search(r"tvg-name=\"(.*?)\"", m.string) else ""}"',
-                    text
-                )
+                # HAPUS LOGO DEFAULT, GANTI DENGAN NAMA CHANNEL (per baris)
+                new_lines = []
+                for line in text.splitlines():
+                    if 'LOGO="' in line:
+                        tvg_name_match = re.search(r'tvg-name="(.*?)"', line)
+                        logo_new = tvg_name_match.group(1) if tvg_name_match else ""
+                        line = re.sub(r'LOGO=".*?"', f'LOGO="{logo_new}"', line)
+                    new_lines.append(line)
+                playlist_content += "\n".join(new_lines) + "\n"
 
-                playlist_content += text + "\n"
                 print(f"[OK] {url}")
                 break
             else:
@@ -79,4 +81,4 @@ xtream_data = {
 with open("xtream.json", "w", encoding="utf-8") as f:
     json.dump(xtream_data, f, indent=2)
 
-print("✅ playlist.m3u dan xtream.json berhasil dibuat")
+print("✓ playlist.m3u dan xtream.json berhasil dibuat")
